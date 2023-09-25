@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: testmvcappgitops
-          image: gitopstestacr.azurecr.io/testmvcappgitops:1.0
+          image: gitopstestacr.azurecr.io/testmvcappgitops:2.0
           ports:
             - containerPort: 5227
