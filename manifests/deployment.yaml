@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testmvcappgitops
+  labels:
+    app: testmvcappgitops
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testmvcappgitops
+  template:
+    metadata:
+      labels:
+        app: testmvcappgitops
+    spec:
+      containers:
+        - name: testmvcappgitops
+          image: gitopstestacr.azurecr.io/testmvcappgitops:1.0
+          ports:
+            - containerPort: 5227

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testmvcappgitops
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: testmvcappgitops
+  ports:
+    - protocol: TCP
+      port: 5227
+      targetPort: 5227
